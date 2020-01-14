@@ -1,0 +1,18 @@
+<div>  
+  <div class="row">  
+    <div class="col-sm-12 btn card-header">  
+        <h1>{{data.title}}</h1> 
+	<h2>Danh Sach Student</h2>
+	<table>
+		
+		<tr *ngFor="let item of data.items">
+			<td>{{item.ma}}</td>
+			<td>{{item.hodem + items.ten | uppercase}} </td>
+			<td>{{item.ngaysinh}}</td>
+			<td>{{item.diemtongket}}</td>
+			<td>{{item.xeploai}}</td>
+		</tr>
+	</table>
+    </div>  
+  </div>  
+</div>

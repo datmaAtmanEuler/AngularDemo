@@ -12,6 +12,7 @@ import { ModalsComponent } from './modals/modals.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { EmployeesComponent } from './employees/employees.component';
+import { Demo1Component } from './demo1/demo1.component';
 import { TextEditorComponent } from './texteditor/texteditor.component';
 import { PagecontentComponent } from './pagecontent/pagecontent.component';
 import { DetailspostComponent } from './detailspost/detailspost.component';
@@ -50,6 +51,7 @@ import { ThemeModule } from './theme/theme.module';
     CalendarModule.forRoot()
   ],
   declarations: [
+    Demo1Component,
     LoginComponent,
     RegisterComponent,
     EmployeesComponent,
@@ -68,6 +70,7 @@ import { ThemeModule } from './theme/theme.module';
     NotFoundComponent
   ],
   exports: [
+    Demo1Component,
     EmployeesComponent,
     TextEditorComponent,
     PagecontentComponent,

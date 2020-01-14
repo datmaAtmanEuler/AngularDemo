@@ -13,6 +13,7 @@ import { NotFoundComponent } from './views/errors/not-found/not-found.component'
 import { DetailspostComponent } from './views/detailspost/detailspost.component';
 import { PagecontentComponent } from './views/pagecontent/pagecontent.component';
 import { TextEditorComponent } from './views/texteditor/texteditor.component';
+import { Demo1Component } from './views/demo1/demo1.component';
 
 import { Dashboard1Component } from './views/dashboards/dashboard1/dashboard1.component';
 
@@ -29,7 +30,7 @@ const routes: Route[] = [
       { path: '', component: RegisterComponent },
     ]
   },
-  { path: 'employees', children:
+  { path: 'demo/employees', children:
     [
       { path: '', component: EmployeesComponent },
     ]
@@ -47,6 +48,11 @@ const routes: Route[] = [
   { path: 'texteditor', children:
     [
       { path: '', component: TextEditorComponent },
+    ]
+  },
+  { path: 'testdemo', children:
+    [
+      { path: '', component: Demo1Component },
     ]
   },
   { path: 'dashboards', children:
