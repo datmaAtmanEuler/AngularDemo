@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { Demo1Component } from './demo1/demo1.component';
+import { Nhom3Component } from './Nhom3/nhom3.component';
 import { TextEditorComponent } from './texteditor/texteditor.component';
 import { PagecontentComponent } from './pagecontent/pagecontent.component';
 import { DetailspostComponent } from './detailspost/detailspost.component';
@@ -51,6 +52,7 @@ import { ThemeModule } from './theme/theme.module';
     CalendarModule.forRoot()
   ],
   declarations: [
+    Nhom3Component,
     Demo1Component,
     LoginComponent,
     RegisterComponent,
@@ -70,6 +72,7 @@ import { ThemeModule } from './theme/theme.module';
     NotFoundComponent
   ],
   exports: [
+    Nhom3Component,
     Demo1Component,
     EmployeesComponent,
     TextEditorComponent,

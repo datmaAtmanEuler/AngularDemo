@@ -15,6 +15,8 @@ import { PagecontentComponent } from './views/pagecontent/pagecontent.component'
 import { TextEditorComponent } from './views/texteditor/texteditor.component';
 import { Demo1Component } from './views/demo1/demo1.component';
 
+import { Nhom3Component } from './views/Nhom3/nhom3.component';
+
 import { Dashboard1Component } from './views/dashboards/dashboard1/dashboard1.component';
 
 
@@ -53,6 +55,11 @@ const routes: Route[] = [
   { path: 'testdemo', children:
     [
       { path: '', component: Demo1Component },
+    ]
+  },
+  { path: 'Nhom3/students', children:
+    [
+      { path: '', component: Nhom3Component },
     ]
   },
   { path: 'dashboards', children:

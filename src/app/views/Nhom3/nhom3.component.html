@@ -4,14 +4,24 @@
         <h1>{{data.title}}</h1> 
 	<h2>Danh Sach Student</h2>
 	<table>
-		
-		<tr *ngFor="let item of data.items">
-			<td>{{item.ma}}</td>
-			<td>{{item.hodem + items.ten | uppercase}} </td>
-			<td>{{item.ngaysinh}}</td>
-			<td>{{item.diemtongket}}</td>
-			<td>{{item.xeploai}}</td>
-		</tr>
+		<thead>
+			<tr>
+				<th>MaSV</th>
+				<th>Ho ten</th>
+				<th>Ngay sinh</th>
+				<th>Diem tong ket</th>
+				<th>Xep loai</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let item of data.items">
+				<td>{{item.ma}}</td>
+				<td>{{item.hodem + items.ten | uppercase}} </td>
+				<td>{{item.ngaysinh}}</td>
+				<td>{{item.diemtongket}}</td>
+				<td>{{item.xeploai}}</td>
+			</tr>
+		</tbody>
 	</table>
     </div>  
   </div>  
