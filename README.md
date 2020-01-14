@@ -1,4 +1,4 @@
-# Admin-Dashboard-Template-Angular-Bootstrap-master
+# Admin-Dashboard-Template-Angular-Bootstrap-master - Created by DaricWu (datphan82thuduc@gmail.com)
  
 clone this project into your local location
 run these following command line:
