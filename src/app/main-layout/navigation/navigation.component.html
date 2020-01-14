@@ -1,0 +1,94 @@
+<!--Main Navigation-->
+<header>
+
+    <!-- Sidebar -->
+    <div class="sidebar-fixed position-fixed">
+
+        <a class="logo-wrapper waves-effect">
+            <img src="./assets/logo/logoc8d58f8-62.png" class="img-fluid" alt="">
+        </a>
+
+        <div class="list-group list-group-flush">
+
+            <a routerLink="dashboards/v1" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="chart-pie" class="mr-3"></mdb-icon>{{ "SIDEBAR.Dashboard.NAME" | translate }}
+            </a>
+            <a routerLink="profiles/profile1" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="user" class="mr-3"></mdb-icon>{{ "SIDEBAR.Profile.NAME" | translate }}</a>
+            <a routerLink="pagecontent" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="list-alt" class="mr-3"></mdb-icon>Page content</a>
+	        <a routerLink="texteditor" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="pencil-alt" class="mr-3"></mdb-icon>TextEditor</a>
+            <a routerLink="employees" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="user" class="mr-3"></mdb-icon>{{ "SIDEBAR.Employees.NAME" | translate }}</a>
+	    <a routerLink="nonExistingPath" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                <mdb-icon fas icon="exclamation" class="mr-3"></mdb-icon>404</a>
+
+        </div>
+
+    </div>
+    <!-- Sidebar -->
+
+    <!--Navbar-->
+    <mdb-navbar [containerInside]="false" SideClass="navbar navbar-expand-lg navbar-light top-bar-items-area">
+
+        <!-- Navbar brand -->
+        <logo class="ml-3">
+            <a class="navbar-brand" href="/">
+                <strong class="blue-text">{{ "LAYOUT.HOME" | translate }}</strong>
+            </a>
+        </logo>
+
+        <!-- Collapsible content -->
+        <links>
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://egov.ascvn.com.vn/" target="_blank" mdbWavesEffect>{{ "LAYOUT.ABOUT_US" | translate }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://mdbootstrap.com/angular/angular-tutorial/" target="_blank" mdbWavesEffect>{{ "LAYOUT.DOCUMENTS" | translate }}</a>
+                </li>
+            </ul>
+            <!-- Links -->
+
+            <!-- Search form -->
+            <ul class="navbar-nav nav-flex-icons">
+
+                    <li class="nav-item">
+                        <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank" mdbWavesEffect>
+                            <mdb-icon fab icon="facebook-f"></mdb-icon>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown btn-group my-auto" dropdown>
+          <a dropdownToggle type="button" class="nav-link dropdown-toggle">
+            {{'MESSAGE.NameList.ThemeSetting' | translate}}
+          </a>
+          <div class="dropdown-menu dropdown-primary dropdown-menu-left" role="menu">
+            <a class="dropdown-item" *ngFor="let theme of themesList">
+              <span (mouseover)="mouseOverThemeSetting(theme.id)" (mouseout)="mouseOutThemeSetting()" [style.color]="theme.color" (click)="toggleTheme(theme.id)">{{'THEMES.' + theme.name + '.Name' | translate}}</span>
+            </a>
+          </div>
+        </li>
+		   <li class="nav-item dropdown btn-group my-auto" dropdown>
+          <a dropdownToggle type="button" class="nav-link dropdown-toggle">
+            <img [src]="selectedLanguage.flag" class="flag-icon position-left" alt="">
+            {{'LAYOUT.' + selectedLanguage.description.toString().toUpperCase() | translate}}
+          </a>
+          <div class="dropdown-menu dropdown-primary dropdown-menu-left" role="menu">
+            <a class="dropdown-item" *ngFor="let language of languages" (click)="updateLanguage(language)">
+              <img [src]="language.flag" class="flag-icon position-left" alt="">
+              {{'LAYOUT.' + language.description.toString().toUpperCase() | translate}}
+            </a>
+          </div>
+        </li>
+                </ul>
+        </links>
+        <!-- Collapsible content -->
+
+    </mdb-navbar>
+    <!--/.Navbar-->
+
+</header>
+<!--Main Navigation-->

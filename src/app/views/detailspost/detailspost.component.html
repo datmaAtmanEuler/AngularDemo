@@ -1,0 +1,25 @@
+<div class="row mt-5">
+    <div class="col-md-12 page-content-area">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true" class="mt-5">
+            <!--Card image-->
+            <div class="view gradient-card-header card-header">
+                <h4 class="h4-responsive text-white text-left">{{ "MESSAGE.POST.Details" | translate}}</h4>
+            </div>
+            <!--/Card image-->
+            <!--Card content-->
+            <mdb-card-body>
+                <h3>{{ res.Title}} </h3>
+		<hr />
+		<ckeditor [editor]="Editor" class="element-not-allow" [config]="{toolbar: []}" [ngModel]="res.Content"></ckeditor>
+		<hr />
+		<div>
+			<button class="btn btn-primary w150 mr-2" (click)="ReturnList()" alt='{{ "MESSAGE.NameList.PageContent" }}'>{{ "MESSAGE.NameList.PageContent" | translate }}</button>
+<button class="btn btn-info w150" (click)="editPost()" alt='{{ "MESSAGE.NameList.Edit" | translate }}'>{{ "MESSAGE.NameList.Edit" | translate }}</button>
+		</div>
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+</div>

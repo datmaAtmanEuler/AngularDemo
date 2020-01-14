@@ -1,0 +1,28 @@
+<form (ngSubmit)="onSubmit()" novalidate style="margin: 30px;">  
+    <div class="form-group">    
+        <input autofocus autocomplete="none" ngDefaultControl type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="contentdata.Title" placeholder='{{ "MESSAGE.POST.EnterTitle" | translate }}'    
+            class="form-control">    
+    </div>    
+    <ckeditor ngDefaultControl [ngModelOptions]="{standalone: true}" [editor]="Editor" [(ngModel)]="contentdata.Content"></ckeditor>
+    <div class="form-group mt-4">    
+        <div class="row">    
+            <div class="col-3 col-md-3 mb-3">    
+                <button type="submit" class="btn btn-info">{{ "MESSAGE.SUBMIT" | translate }}</button>    
+            </div>    
+        </div>    
+    </div>    
+</form>
+
+<div mdbModal #confirmDataSave="mdbModal" class="modal fade left" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true" [config]='{backdrop: true, ignoreBackdropClick: true}'>
+    <div class="modal-dialog confirmDialog" role="document">
+        <div class="modal-content confirmDialog">
+            <p class="confirm">{{ "MESSAGE.NameList.Confirm" | translate}}</p>
+            <div class="modal-body confirmDialog ml-3 mr-3 text-center" [innerHTML]=' ("MESSAGE.CONFIRMATION.DataSaveSuccessfully" | translate)'>
+            </div>
+            <div [class]="'btn-button mt-2'">
+                <button class="button-save" style="margin-right: 0;" (click)="closeConfirmation();">{{ "MESSAGE.NameList.Close" | translate}}</button>
+            </div>
+        </div>
+    </div>
+</div>
