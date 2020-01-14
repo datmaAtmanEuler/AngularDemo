@@ -32,9 +32,12 @@ import {TranslateModule} from '@ngx-translate/core';
 import { SharedModule } from '../shared/shared.module';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular'; 
 import { ThemeModule } from './theme/theme.module'; 
+import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
 
 @NgModule({
   imports: [
+    ChartsModule,
+    WavesModule,
     CKEditorModule,
     TranslateModule,
     CommonModule,
