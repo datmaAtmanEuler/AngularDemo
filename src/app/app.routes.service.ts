@@ -18,6 +18,7 @@ import { Demo1Component } from './views/demo1/demo1.component';
 import { Nhom3Component } from './views/Nhom3/nhom3.component';
 
 import { Dashboard1Component } from './views/dashboards/dashboard1/dashboard1.component';
+import { StatsCardComponent } from './views/dashboards/common/stats-card/stats-card.component';
 
 
 const routes: Route[] = [
@@ -32,7 +33,7 @@ const routes: Route[] = [
       { path: '', component: RegisterComponent },
     ]
   },
-  { path: 'demo/employees', children:
+  { path: 'employees', children:
     [
       { path: '', component: EmployeesComponent },
     ]
@@ -65,6 +66,7 @@ const routes: Route[] = [
   { path: 'dashboards', children:
     [
       { path: 'v1', component: Dashboard1Component },
+      { path: 'v2', component: StatsCardComponent }
     ]
   },
   { path: 'profiles', children:

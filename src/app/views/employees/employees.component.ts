@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { EmployeeService } from '../../services/employee.service';
 import { Employee } from '../../models/employee';
+import { EmployeeFilter } from '../../models/employeefilter';
 import {ModalDirective} from '../../lib/ng-uikit-pro-standard/free/modals';
 import * as ClassicEditor from '../../../assets/js/ck-editor-math-type/ckeditor.js';
 
@@ -14,7 +15,9 @@ export class EmployeesComponent implements OnInit {
   employeesList:any = [];
   employee: any;
   Editor = ClassicEditor;
-
+  searchTerm:string = '';
+  pageIndex:number = 1;
+  pageSize:number = 20;
   constructor(private service: EmployeeService) { }
 
   ngOnInit() {
@@ -28,7 +31,9 @@ export class EmployeesComponent implements OnInit {
 
   reload() {
 	const _this = this;
-	this.service.getEmployeesList().subscribe((res:Employee[]) => {
+	const filter: EmployeeFilter = new EmployeeFilter(this.searchTerm, this.pageIndex, this.pageSize);
+console.log(filter);
+	this.service.getEmployeesList(filter).subscribe((res:Employee[]) => {
 		_this.employeesList = res;
 		_this.employeesList.forEach(function(employee: Employee) {
 			const rpt = employee.ReportingTo;

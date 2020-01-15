@@ -55,6 +55,7 @@ import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
     CalendarModule.forRoot()
   ],
   declarations: [
+    StatsCard2Component,
     Nhom3Component,
     Demo1Component,
     LoginComponent,
@@ -68,13 +69,13 @@ import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
     ModalsComponent,
     Map1Component,
     StatsCardComponent,
-    StatsCard2Component,
     Dashboard1Component,
     Profile1Component,
     HelpComponent,
     NotFoundComponent
   ],
   exports: [
+    StatsCard2Component,
     Nhom3Component,
     Demo1Component,
     EmployeesComponent,
@@ -85,8 +86,7 @@ import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
     BasicTableComponent,
     ModalsComponent,
     Map1Component,
-    StatsCardComponent,
-    StatsCard2Component,    
+    StatsCardComponent,  
     Dashboard1Component,
     NotFoundComponent
   ],
